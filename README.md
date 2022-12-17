@@ -1,9 +1,9 @@
-# Siteation - Magento 2 Module Store Info Extra
+# Siteation - Magento 2 Store Info Extra
 
 [![Packagist Version](https://img.shields.io/packagist/v/siteation/magento2-storeinfo-extra?style=for-the-badge)](https://packagist.org/packages/siteation/magento2-storeinfo-extra)
 ![Supported Magento Versions](https://img.shields.io/badge/magento-%202.3_|_2.4-brightgreen.svg?logo=magento&longCache=true&style=for-the-badge)
 [![Hyvä Themes Supported](https://img.shields.io/badge/Hyva_Themes-Supported-3df0af.svg?longCache=true&style=for-the-badge)](https://hyva.io/)
-![License](https://img.shields.io/github/license/Siteation/magento2-module-storeinfo-extra?color=%23234&style=for-the-badge)
+![License](https://img.shields.io/github/license/Siteation/magento2-storeinfo-extra?color=%23234&style=for-the-badge)
 
 This Magento 2 module add the option to show social buttons or more extras with ease.
 
