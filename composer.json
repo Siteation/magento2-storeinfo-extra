@@ -1,6 +1,6 @@
 {
   "name": "siteation/magento2-storeinfo-extra",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "license": "MIT",
   "type": "magento2-module",
   "description": "Get your store information with ease",
@@ -26,8 +26,7 @@
   ],
   "require": {
     "magento/framework": "^102.0|^103.0",
-    "magento/module-backend": "^101.0|^102.0",
-    "hyva-themes/magento2-theme-module": "^1.1"
+    "magento/module-backend": "^101.0|^102.0"
   },
   "autoload": {
     "files": ["registration.php"],
