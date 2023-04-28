@@ -63,6 +63,11 @@ class StoreInfoExtra implements ArgumentInterface
         return (string) $this->getStoreInfoExtra('instagram_address');
     }
 
+    public function getMastodon(): string
+    {
+        return (string) $this->getStoreInfoExtra('mastodon_address');
+    }
+
     public function getPinterest(): string
     {
         return (string) $this->getStoreInfoExtra('pinterest_address');

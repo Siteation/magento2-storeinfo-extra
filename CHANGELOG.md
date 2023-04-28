@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.0] - 2023-04-28
+### Added
+- Dedicated menu item for config
+- Mastodon social option
+
+### Changed
+- Sample for rending each social icon
+
 ## [2.0.1] - 2022-12-17
 ### Fixed
 - Dependancy version
