@@ -20,7 +20,7 @@ $socials = [
     ],
     [
         'type' => 'twitter',
-        'link' => 'https://twitter.com/' . $storeInfoExtra->getTwitter(),
+        'link' => $storeInfoExtra->getTwitter() ? 'https://twitter.com/' . $storeInfoExtra->getTwitter() : '',
         'title' => __('Visit %1 on Twitter for more', $storeInfoExtra->getTwitter())
     ],
     [
