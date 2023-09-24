@@ -15,7 +15,7 @@ $storeInfoExtra = $viewModels->require(StoreInfoExtra::class);
 
 <?php if ($whatsapp = $storeInfoExtra->getWhatsApp()): ?>
     <a class="btn btn-primary whatsapp"
-        href="https://api.whatsapp.com/send?phone=<?= $escaper->escapeHtml($whatsapp); ?>"
+        href="https://wa.me/<?= $escaper->escapeHtml($whatsapp); ?>"
         target="_blank"
         rel="noopener noreferrer">
         <span><?= $escaper->escapeHtml(__('Call us via WhatsApp')); ?></span>
