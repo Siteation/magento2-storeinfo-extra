@@ -38,11 +38,13 @@ class StoreInfoExtra implements ArgumentInterface
         return (string) $this->getStoreInfoExtra('coc_number');
     }
 
+    // Phone numbers
     public function getWhatsApp(): string
     {
         return (string) $this->getStoreInfoExtra('whatsapp_number');
     }
 
+    // Socials
     public function getFacebook(): string
     {
         return (string) $this->getStoreInfoExtra('facebook_address');
