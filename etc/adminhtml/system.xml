@@ -65,12 +65,12 @@
             </group>
         </section>
 
-        <section id="siteation_storeinfo_extra" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10"
+        <section id="siteation_storeinfo" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10"
             translate="label">
             <label>Store Info</label>
             <tab>siteation</tab>
             <resource>Magento_Backend::store</resource>
-            <group id="storeinfo_extra" translate="label" sortOrder="110" showInDefault="1" showInWebsite="1"
+            <group id="extra" translate="label" sortOrder="110" showInDefault="1" showInWebsite="1"
                 showInStore="1">
                 <label>StoreInfo Extra</label>
                 <comment>(These settings can also be found in General > General > Store Extra Information)</comment>
@@ -86,7 +86,7 @@
                     <config_path>general/store_information_extra/whatsapp_number</config_path>
                 </field>
             </group>
-            <group id="storeinfo_extra_socials" translate="label" sortOrder="120" showInDefault="1" showInWebsite="1"
+            <group id="socials" translate="label" sortOrder="120" showInDefault="1" showInWebsite="1"
                 showInStore="1">
                 <label>StoreInfo Socials</label>
                 <comment>(These settings can also be found in General > General > Store Extra Information)</comment>
