@@ -26,6 +26,16 @@
                     <label>WhatsApp Contact Number</label>
                     <validate>no-marginal-whitespace</validate>
                 </field>
+                <field
+                    id="socials_separator"
+                    type="note"
+                    sortOrder="100"
+                    showInDefault="1"
+                    showInWebsite="1"
+                    showInStore="1"
+                >
+                    <frontend_model>Siteation\StoreInfoExtra\Block\Adminhtml\Render\Separator</frontend_model>
+                </field>
                 <field id="facebook_address" translate="label" type="text" sortOrder="110" showInDefault="1"
                     showInWebsite="1" showInStore="1">
                     <label>Facebook url</label>
