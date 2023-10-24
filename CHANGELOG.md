@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update whatsapp url in sample templates to new url format
 - Social option: Twitter updated to the to _X (Twitter)_ brand,
   only for the label and the icon, internal name is the same
+  the old icon is available as `twitter-bird`
 
 ## [2.1.2] - 2023-05-16
 ### Fixed
