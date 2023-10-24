@@ -12,24 +12,24 @@ $storeInfoExtra = $block->getData('viewModelStoreInfo');
 
 $socials = [
     [
-        'type' => 'facebook',
-        'link' => $storeInfoExtra->getFacebook(),
-        'title' => __('Go to our %1 page', 'Facebook')
-    ],
-    [
-        'type' => 'twitter',
-        'link' => $storeInfoExtra->getTwitter() ? 'https://twitter.com/' . $storeInfoExtra->getTwitter() : '',
-        'title' => __('Visit %1 on Twitter for more', $storeInfoExtra->getTwitter())
-    ],
-    [
         'type' => 'linkedin',
         'link' => $storeInfoExtra->getLinkedIn(),
         'title' => __('Go to our %1 page', 'LinkedIn')
     ],
     [
+        'type' => 'facebook',
+        'link' => $storeInfoExtra->getFacebook(),
+        'title' => __('Go to our %1 page', 'Facebook')
+    ],
+    [
         'type' => 'instagram',
         'link' => $storeInfoExtra->getInstagram(),
         'title' => __('Explore our %1 page', 'Instagram')
+    ],
+    [
+        'type' => 'twitter',
+        'link' => $storeInfoExtra->getTwitter() ? 'https://twitter.com/' . $storeInfoExtra->getTwitter() : '',
+        'title' => __('Visit %1 on Twitter for more', $storeInfoExtra->getTwitter())
     ],
     [
         'type' => 'mastodon',
