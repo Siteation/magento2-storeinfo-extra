@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Extra Phone number option, this allow land line, fax or other phone based options
 ## [2.1.2] - 2023-05-16
 ### Fixed
 - False empty for twitter
