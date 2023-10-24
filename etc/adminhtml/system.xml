@@ -43,7 +43,7 @@
                 </field>
                 <field id="twitter_handle" translate="label" type="text" sortOrder="120" showInDefault="1"
                     showInWebsite="1" showInStore="1">
-                    <label>Twitter handle</label>
+                    <label>X (Twitter) handle</label>
                     <validate>no-whitespace</validate>
                     <tooltip>Enter a valid Twitter handle without the url</tooltip>
                 </field>
