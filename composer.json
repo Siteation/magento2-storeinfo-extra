@@ -15,7 +15,8 @@
     "twitter",
     "linkedin",
     "instagram",
-    "youtube"
+    "youtube",
+    "mastodon"
   ],
   "authors": [
     {
@@ -29,7 +30,9 @@
     "magento/module-backend": "^101.0|^102.0"
   },
   "autoload": {
-    "files": ["registration.php"],
+    "files": [
+      "registration.php"
+    ],
     "psr-4": {
       "Siteation\\StoreInfoExtra\\": ""
     }
