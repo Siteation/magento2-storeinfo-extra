@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Extra Phone number option, this allow land line, fax or other phone based options
 - Separator for the General → General → Store Extra Information options, to show the split between socials and other
 
+### Changed
+- Update whatsapp url in sample templates to new url format
 ## [2.1.2] - 2023-05-16
 ### Fixed
 - False empty for twitter
