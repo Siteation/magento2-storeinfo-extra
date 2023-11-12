@@ -1,0 +1,39 @@
+<?php declare(strict_types=1);
+
+/**
+ * @author Siteation (https://siteation.dev/)
+ * @copyright Copyright 2021 Siteation (https://siteation.dev/)
+ * @license MIT
+ */
+
+use Hyva\Theme\Model\ViewModelRegistry;
+use Magento\Framework\View\Element\Template;
+use Magento\Framework\Escaper;
+use Siteation\StoreInfoExtra\ViewModel\StoreInfoBussinesHours;
+
+/** @var ViewModelRegistry $viewModels */
+/** @var Template $block */
+/** @var Escaper $escaper */
+/** @var StoreInfoBussinesHours $bussinesHours */
+
+$bussinesHours = $viewModels->require(StoreInfoBussinesHours::class);
+
+// TODO: add Store Hours of Operation as default when value is empty
+?>
+
+<?php if ($bussinesHours->enabled()): ?>
+    <table>
+        <tr class="border-b">
+            <th class="text-start p-2"><?= $escaper->escapeHtml(__('Day')); ?></th>
+            <th class="text-start p-2"><?= $escaper->escapeHtml(__('Opening Hours')); ?></th>
+            <th class="text-start p-2"><?= $escaper->escapeHtml(__('Closing Hours')); ?></th>
+        </tr>
+        <?php foreach ($bussinesHours->getBussinesHours() as $day): ?>
+            <tr class="even:bg-container-darker">
+                <td class="p-2"><?= $day['day_of_week'] ?></td>
+                <td class="p-2"><?= $day['opening_hours'] ?></td>
+                <td class="p-2"><?= $day['closing_hours'] ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+<?php endif; ?>

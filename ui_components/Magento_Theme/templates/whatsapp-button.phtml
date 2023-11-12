@@ -1,23 +1,29 @@
 <?php declare(strict_types=1);
 
+/**
+ * @author Siteation (https://siteation.dev/)
+ * @copyright Copyright 2021 Siteation (https://siteation.dev/)
+ * @license MIT
+ */
+
+use Hyva\Theme\Model\ViewModelRegistry;
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\Escaper;
 use Siteation\StoreInfoExtra\ViewModel\StoreInfoExtra;
 
+/** @var ViewModelRegistry $viewModels */
 /** @var Template $block */
 /** @var Escaper $escaper */
 /** @var StoreInfoExtra $storeInfoExtra */
 
-$storeInfoExtra = $block->getData('viewModelStoreInfo');
+$storeInfoExtra = $viewModels->require(StoreInfoExtra::class);
 ?>
 
-<?php if ($whatsapp = $storeInfoExtra->getWhatsapp()): ?>
-    <a
-        class="action primary whatsapp"
+<?php if ($whatsapp = $storeInfoExtra->getWhatsApp()): ?>
+    <a class="btn btn-primary whatsapp"
         href="https://wa.me/<?= $escaper->escapeHtml($whatsapp); ?>"
         target="_blank"
-        rel="noopener noreferrer"
-    >
+        rel="noopener noreferrer">
         <span><?= $escaper->escapeHtml(__('Call us via WhatsApp')); ?></span>
     </a>
 <?php endif; ?>
