@@ -1,0 +1,20 @@
+<?php declare(strict_types=1);
+
+use Magento\Framework\View\Element\Template;
+use Magento\Framework\Escaper;
+use Siteation\StoreInfoExtra\ViewModel\StoreInfoExtra;
+
+/** @var Template $block */
+/** @var Escaper $escaper */
+/** @var StoreInfoExtra $storeInfoExtra */
+
+$storeInfoExtra = $block->getData('viewModelStoreInfo');
+?>
+
+<?php if ($message = $storeInfoExtra->getNotices()): ?>
+    <section class="message global">
+        <div class="container text-center">
+            <p><?= $escaper->escapeHtml($message); ?></p>
+        </div>
+    </section>
+<?php endif; ?>

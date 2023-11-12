@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd"
+>
+    <default>
+        <siteation_storeinfo>
+            <notices>
+                <enabled>1</enabled>
+                <message>Hello There, this your notices, sales, update e.t.c.</message>
+            </notices>
+        </siteation_storeinfo>
+    </default>
+</config>

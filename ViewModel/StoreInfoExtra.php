@@ -44,6 +44,11 @@ class StoreInfoExtra implements ArgumentInterface
         return (string) $this->getStoreInfoExtra('whatsapp_number');
     }
 
+    public function getExtraPhone(): string
+    {
+        return (string) $this->getStoreInfoExtra('extra_phone');
+    }
+
     // Socials
     public function getFacebook(): string
     {
@@ -83,5 +88,26 @@ class StoreInfoExtra implements ArgumentInterface
     public function getVimeo(): string
     {
         return (string) $this->getStoreInfoExtra('vimeo_address');
+    }
+
+    /**
+     * Get store notification
+     *
+     * @param string $attribute
+     * @return mixed
+     */
+    public function getStoreInfoNotices(string $attribute)
+    {
+        $path = sprintf('siteation_storeinfo/notices/%s', $attribute);
+        return $this->scopeConfig->getValue($path, ScopeInterface::SCOPE_STORE);
+    }
+
+    public function getNotices(): string
+    {
+        if (!$this->getStoreInfoNotices('enabled')) {
+            return '';
+        }
+
+        return (string) $this->getStoreInfoNotices('message');
     }
 }
