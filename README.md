@@ -53,9 +53,11 @@ After this Enter your information in the available options found in Stores > Con
 
 ```xml
 <referenceContainer name="footer">
-    <block name="footer.store.socials"
+    <block
+        name="footer.store.socials"
         as="footer-store-socials"
-        template="Siteation_StoreInfoExtra::luma/socials.phtml">
+        template="Siteation_StoreInfoExtra::luma/socials.phtml"
+    >
         <arguments>
             <argument name="viewModelStoreInfo" 
                 xsi:type="object">Siteation\StoreInfoExtra\ViewModel\StoreInfoExtra</argument>
