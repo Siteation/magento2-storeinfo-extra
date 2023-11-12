@@ -1,0 +1,33 @@
+<?php declare(strict_types=1);
+
+use Hyva\Theme\Model\ViewModelRegistry;
+use Magento\Framework\View\Element\Template;
+use Magento\Framework\Escaper;
+use Siteation\StoreInfoExtra\ViewModel\StoreInfoBussinesHours;
+
+/** @var ViewModelRegistry $viewModels */
+/** @var Template $block */
+/** @var Escaper $escaper */
+/** @var StoreInfoBussinesHours $bussinesHours */
+
+$bussinesHours = $viewModels->require(StoreInfoBussinesHours::class);
+?>
+
+<?php if ($bussinesHours->enabled()): ?>
+    <div class="pr-4 lg:w-2/4 md:w-1/2">
+        <table>
+            <tr class="border-b">
+                <th class="text-start p-2"><?= $escaper->escapeHtml(__('Day')); ?></th>
+                <th class="text-start p-2"><?= $escaper->escapeHtml(__('Opening Hours')); ?></th>
+                <th class="text-start p-2"><?= $escaper->escapeHtml(__('Closing Hours')); ?></th>
+            </tr>
+            <?php foreach ($bussinesHours->getAll() as $day): ?>
+                <tr class="even:bg-container-darker">
+                    <td class="p-2"><?= $day['day_of_week'] ?></td>
+                    <td class="p-2"><?= $day['opening_hours'] ?></td>
+                    <td class="p-2"><?= $day['closing_hours'] ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    </div>
+<?php endif; ?>

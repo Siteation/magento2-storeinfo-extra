@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd"
+>
+    <default>
+        <siteation_storeinfo>
+            <bussines_hours>
+                <enabled>0</enabled>
+                <daily_hours>
+                    <item1>
+                        <day_of_week>Monday Morning</day_of_week>
+                        <opening_hours>08:00</opening_hours>
+                        <closing_hours>12:00</closing_hours>
+                    </item1>
+                    <item2>
+                        <day_of_week>Monday Afternoon</day_of_week>
+                        <opening_hours>14:00</opening_hours>
+                        <closing_hours>18:00</closing_hours>
+                    </item2>
+                </daily_hours>
+            </bussines_hours>
+        </siteation_storeinfo>
+    </default>
+</config>

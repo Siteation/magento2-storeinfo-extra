@@ -108,7 +108,7 @@
                 </field>
             </group>
 
-            <group id="socials" translate="label" sortOrder="120" showInDefault="1" showInWebsite="1"
+            <group id="socials" translate="label" sortOrder="140" showInDefault="1" showInWebsite="1"
                 showInStore="1">
                 <label>Socials</label>
                 <comment>(These settings can also be found in General > General > Store Extra Information)</comment>
@@ -160,6 +160,39 @@
                     <label>Vimeo url</label>
                     <validate>validate-url</validate>
                     <config_path>general/store_information_extra/vimeo_address</config_path>
+                </field>
+            </group>
+
+            <group id="bussines_hours" translate="label" sortOrder="180" showInDefault="1" showInWebsite="1"
+                showInStore="1">
+                <label>Bussines Hours</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1"
+                    showInWebsite="1"
+                    showInStore="1" canRestore="1">
+                    <label>Enabled Service Hours of Operation</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="timezone" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1"
+                    showInStore="1">
+                    <label>Timezone</label>
+                    <config_path>general/locale/timezone</config_path>
+                    <source_model>Magento\Config\Model\Config\Source\Locale\Timezone</source_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Locale\Timezone</backend_model>
+                </field>
+                <field id="hours" translate="label" type="text" sortOrder="14" showInDefault="1"
+                    showInWebsite="1" showInStore="1">
+                    <label>Store Hours of Operation</label>
+                    <config_path>general/store_information/hours</config_path>
+                </field>
+                <field id="daily_hours" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1"
+                    showInStore="1" canRestore="1">
+                    <label>Service Hours of Operation</label>
+                    <frontend_model>Siteation\StoreInfoExtra\Block\Adminhtml\Form\Field\HourRanges</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                    <comment><![CDATA[Use 24-Hours <strong>(00:00 to 23:00)</strong> time format for opening and closing hours.]]></comment>
+                    <depends>
+                        <field id="enabled_daily_hours">1</field>
+                    </depends>
                 </field>
             </group>
         </section>
