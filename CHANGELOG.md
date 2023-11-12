@@ -7,15 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Store Notice option to show a sale or other messages,
+  this renderd by default before the header same as message global
 - Extra Phone number option, this allow land line, fax or other phone based options
 - Separator for the General → General → Store Extra Information options, to show the split between socials and other
 
 ### Changed
-- Update whatsapp url in sample templates to new url format
+- Update whatsapp url in ui templates to new url format
 - Social option: Twitter updated to the to _X (Twitter)_ brand,
   only for the label and the icon, internal name is the same
   the old icon is available as `twitter-bird`
 - Minimal dependencies to Magento 2.4, dropping support for Magento 2.3
+- Socials template updates to now only show the socials when set
+- Socials now loads by default in the footer
 
 ## [2.1.2] - 2023-05-16
 ### Fixed

@@ -86,44 +86,7 @@
             <tab>siteation</tab>
             <resource>Magento_Backend::store</resource>
 
-            <group id="notices" translate="label" sortOrder="110" showInDefault="1" showInWebsite="1"
-                showInStore="1">
-                <label>Notices</label>
-                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1"
-                    showInStore="1" canRestore="1">
-                    <label>Enabled</label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
-                <field id="message" translate="label" type="text" sortOrder="20" showInDefault="1"
-                    showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>Message</label>
-                </field>
-            </group>
-
-            <group id="extra" translate="label" sortOrder="110" showInDefault="1" showInWebsite="1"
-                showInStore="1">
-                <label>Extra</label>
-                <comment>(These settings can also be found in General > General > Store Extra Information)</comment>
-                <field id="coc_number" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
-                    showInStore="1">
-                    <label>CoC number</label>
-                    <config_path>general/store_information_extra/coc_number</config_path>
-                </field>
-                <field id="extra_phone" translate="label" type="text" sortOrder="20" showInDefault="1"
-                    showInWebsite="1" showInStore="1">
-                    <label>Extra Store Phone Number</label>
-                    <validate>no-marginal-whitespace</validate>
-                    <config_path>general/store_information_extra/extra_phone</config_path>
-                </field>
-                <field id="whatsapp_number" translate="label" type="text" sortOrder="20" showInDefault="1"
-                    showInWebsite="1" showInStore="1">
-                    <label>WhatsApp Contact Number</label>
-                    <validate>no-marginal-whitespace</validate>
-                    <config_path>general/store_information_extra/whatsapp_number</config_path>
-                </field>
-            </group>
-
-            <group id="socials" translate="label" sortOrder="140" showInDefault="1" showInWebsite="1"
+            <group id="socials" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1"
                 showInStore="1">
                 <label>Socials</label>
                 <comment>(These settings can also be found in General > General > Store Extra Information)</comment>
@@ -135,7 +98,7 @@
                 </field>
                 <field id="twitter_handle" translate="label" type="text" sortOrder="120" showInDefault="1"
                     showInWebsite="1" showInStore="1">
-                    <label>Twitter handle</label>
+                    <label>X (Twitter) handle</label>
                     <validate>no-whitespace</validate>
                     <tooltip>Enter a valid Twitter handle without the url</tooltip>
                     <config_path>general/store_information_extra/twitter_handle</config_path>
@@ -178,7 +141,21 @@
                 </field>
             </group>
 
-            <group id="bussines_hours" translate="label" sortOrder="180" showInDefault="1" showInWebsite="1"
+            <group id="notices" translate="label" sortOrder="40" showInDefault="1" showInWebsite="1"
+                showInStore="1">
+                <label>Notices</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1"
+                    showInStore="1" canRestore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="message" translate="label" type="text" sortOrder="20" showInDefault="1"
+                    showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Message</label>
+                </field>
+            </group>
+
+            <group id="bussines_hours" translate="label" sortOrder="60" showInDefault="1" showInWebsite="1"
                 showInStore="1">
                 <label>Bussines Hours</label>
                 <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1"
@@ -206,8 +183,31 @@
                     <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
                     <comment><![CDATA[Use 24-Hours <strong>(00:00 to 23:00)</strong> time format for opening and closing hours.]]></comment>
                     <depends>
-                        <field id="enabled_daily_hours">1</field>
+                        <field id="enabled">1</field>
                     </depends>
+                </field>
+            </group>
+
+            <group id="extra" translate="label" sortOrder="80" showInDefault="1" showInWebsite="1"
+                showInStore="1">
+                <label>Extra</label>
+                <comment>(These settings can also be found in General > General > Store Extra Information)</comment>
+                <field id="coc_number" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                    showInStore="1">
+                    <label>CoC number</label>
+                    <config_path>general/store_information_extra/coc_number</config_path>
+                </field>
+                <field id="extra_phone" translate="label" type="text" sortOrder="20" showInDefault="1"
+                    showInWebsite="1" showInStore="1">
+                    <label>Extra Store Phone Number</label>
+                    <validate>no-marginal-whitespace</validate>
+                    <config_path>general/store_information_extra/extra_phone</config_path>
+                </field>
+                <field id="whatsapp_number" translate="label" type="text" sortOrder="20" showInDefault="1"
+                    showInWebsite="1" showInStore="1">
+                    <label>WhatsApp Contact Number</label>
+                    <validate>no-marginal-whitespace</validate>
+                    <config_path>general/store_information_extra/whatsapp_number</config_path>
                 </field>
             </group>
         </section>

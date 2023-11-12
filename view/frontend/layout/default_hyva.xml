@@ -4,6 +4,14 @@
     xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd"
 >
     <referenceContainer name="after.body.start">
-        <block name="store_notices" template="Siteation_StoreInfoExtra::hyva/notices.phtml"/>
+        <block name="storeinfo.notices" template="Siteation_StoreInfoExtra::hyva/notices.phtml"/>
     </referenceContainer>
+
+    <referenceBlock name="footer-content">
+        <block
+            name="storeinfo.socials"
+            template="Siteation_StoreInfoExtra::hyva/socials.phtml"
+            after="-"
+        />
+    </referenceBlock>
 </page>

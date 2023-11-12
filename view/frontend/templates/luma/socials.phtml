@@ -1,5 +1,11 @@
 <?php declare(strict_types=1);
 
+/**
+ * @author Siteation (https://siteation.dev/)
+ * @copyright Copyright 2021 Siteation (https://siteation.dev/)
+ * @license MIT
+ */
+
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\Escaper;
 use Siteation\StoreInfoExtra\ViewModel\StoreInfoExtra;
@@ -10,64 +16,91 @@ use Siteation\StoreInfoExtra\ViewModel\StoreInfoExtra;
 
 $storeInfoExtra = $block->getData('viewModelStoreInfo');
 
-$socials = [
-    [
+$socials = [];
+
+if ($storeInfoExtra->getLinkedIn()) {
+    array_push($socials, [
         'type' => 'linkedin',
         'link' => $storeInfoExtra->getLinkedIn(),
         'title' => __('Go to our %1 page', 'LinkedIn')
-    ],
-    [
+    ]);
+}
+
+if ($storeInfoExtra->getFacebook()) {
+    array_push($socials, [
         'type' => 'facebook',
         'link' => $storeInfoExtra->getFacebook(),
         'title' => __('Go to our %1 page', 'Facebook')
-    ],
-    [
+    ]);
+}
+
+if ($storeInfoExtra->getInstagram()) {
+    array_push($socials, [
         'type' => 'instagram',
         'link' => $storeInfoExtra->getInstagram(),
         'title' => __('Explore our %1 page', 'Instagram')
-    ],
-    [
+    ]);
+}
+
+if ($storeInfoExtra->getTwitter()) {
+    array_push($socials, [
         'type' => 'twitter',
-        'link' => $storeInfoExtra->getTwitter() ? 'https://twitter.com/' . $storeInfoExtra->getTwitter() : '',
+        'link' => $storeInfoExtra->getTwitter()
+            ? 'https://twitter.com/' . $storeInfoExtra->getTwitter()
+            : '',
         'title' => __('Visit %1 on Twitter for more', $storeInfoExtra->getTwitter())
-    ],
-    [
+    ]);
+}
+
+if ($storeInfoExtra->getMastodon()) {
+    array_push($socials, [
         'type' => 'mastodon',
         'link' => $storeInfoExtra->getMastodon(),
         'title' => __('Explore our %1 page', 'Mastodon')
-    ],
-    [
+    ]);
+}
+
+if ($storeInfoExtra->getPinterest()) {
+    array_push($socials, [
         'type' => 'pinterest',
         'link' => $storeInfoExtra->getPinterest(),
         'title' => __('Explore our %1 page', 'Pinterest')
-    ],
-    [
+    ]);
+}
+
+if ($storeInfoExtra->getYouTube()) {
+    array_push($socials, [
         'type' => 'youtube',
         'link' => $storeInfoExtra->getYouTube(),
         'title' => __('Go to our %1 page', 'YouTube')
-    ],
-    [
+    ]);
+}
+
+if ($storeInfoExtra->getVimeo()) {
+    array_push($socials, [
         'type' => 'vimeo',
         'link' => $storeInfoExtra->getVimeo(),
         'title' => __('View more on our %1 page', 'Vimeo')
-    ]
-];
+    ]);
+}
+
+if (!count($socials)) {
+    return '';
+}
 ?>
 
-<div class="socials flex flex-wrap">
+<div class="socials">
     <?php foreach ($socials as $social): ?>
-        <?php if ($social['link']): ?>
-            <a
-                class="action p-2 <?= $social['type']; ?>"
-                href="<?= $escaper->escapeHtml($social['link']); ?>"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="<?= $escaper->escapeHtml($social['title']); ?>"
-            >
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor">
-                    <use href="<?= $block->getViewFileUrl('Siteation_StoreInfoExtra::images/socials.svg'); ?>#<?= $social['type']; ?>" />
-                </svg>
-            </a>
-        <?php endif; ?>
+        <a
+            class="action <?= $social['type']; ?>"
+            href="<?= $escaper->escapeHtml($social['link']); ?>"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="<?= $escaper->escapeHtml($social['title']); ?>"
+        >
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor">
+                <use href="<?= $block->getViewFileUrl('Siteation_StoreInfoExtra::images/socials.svg'); ?>#<?= $social['type']; ?>" />
+            </svg>
+        </a>
     <?php endforeach; ?>
 </div>
