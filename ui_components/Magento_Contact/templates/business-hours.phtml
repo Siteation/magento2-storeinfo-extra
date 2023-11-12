@@ -9,14 +9,14 @@
 use Hyva\Theme\Model\ViewModelRegistry;
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\Escaper;
-use Siteation\StoreInfoExtra\ViewModel\StoreInfoBussinesHours;
+use Siteation\StoreInfoExtra\ViewModel\StoreInfoBusinessHours;
 
 /** @var ViewModelRegistry $viewModels */
 /** @var Template $block */
 /** @var Escaper $escaper */
-/** @var StoreInfoBussinesHours $bussinesHours */
+/** @var StoreInfoBusinessHours $bussinesHours */
 
-$bussinesHours = $viewModels->require(StoreInfoBussinesHours::class);
+$bussinesHours = $viewModels->require(StoreInfoBusinessHours::class);
 
 // TODO: add Store Hours of Operation as default when value is empty
 ?>
@@ -28,7 +28,7 @@ $bussinesHours = $viewModels->require(StoreInfoBussinesHours::class);
             <th class="text-start p-2"><?= $escaper->escapeHtml(__('Opening Hours')); ?></th>
             <th class="text-start p-2"><?= $escaper->escapeHtml(__('Closing Hours')); ?></th>
         </tr>
-        <?php foreach ($bussinesHours->getBussinesHours() as $day): ?>
+        <?php foreach ($bussinesHours->getBusinessHours() as $day): ?>
             <tr class="even:bg-container-darker">
                 <td class="p-2"><?= $day['day_of_week'] ?></td>
                 <td class="p-2"><?= $day['opening_hours'] ?></td>

@@ -12,7 +12,7 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Store\Model\ScopeInterface;
 use Magento\Framework\View\Element\Block\ArgumentInterface;
 
-class StoreInfoBussinesHours implements ArgumentInterface
+class StoreInfoBusinessHours implements ArgumentInterface
 {
     protected $scopeConfig;
 
@@ -27,7 +27,7 @@ class StoreInfoBussinesHours implements ArgumentInterface
      * @param string $attribute
      * @return mixed
      */
-    public function getStoreInfoBussinesHours(string $attribute)
+    public function getStoreInfoBusinessHours(string $attribute)
     {
         $path = sprintf('siteation_storeinfo/bussines_hours/%s', $attribute);
         return $this->scopeConfig->getValue($path, ScopeInterface::SCOPE_STORE);
@@ -35,13 +35,13 @@ class StoreInfoBussinesHours implements ArgumentInterface
 
     public function enabled(): bool
     {
-        return (bool) $this->getStoreInfoBussinesHours('enabled');
+        return (bool) $this->getStoreInfoBusinessHours('enabled');
     }
 
-    public function getAll(): array
+    public function getBusinessHours(): array
     {
         $array = [];
-        $dailyHours = $this->getStoreInfoBussinesHours('daily_hours');
+        $dailyHours = $this->getStoreInfoBusinessHours('daily_hours');
 
         if (empty($dailyHours)) {
             return $array;
@@ -54,26 +54,5 @@ class StoreInfoBussinesHours implements ArgumentInterface
         }
 
         return (array) $array;
-    }
-
-    public function getDayOfWeek()
-    {
-        $all = $this->getAll();
-        $dayOfWeek = array_column($all, 'day_of_week');
-        return $dayOfWeek;
-    }
-
-    public function getOpeningHours()
-    {
-        $all = $this->getAll();
-        $openingHours = array_column($all, 'opening_hours');
-        return $openingHours;
-    }
-
-    public function getClosingHours()
-    {
-        $all = $this->getAll();
-        $closingHours = array_column($all, 'closing_hours');
-        return $closingHours;
     }
 }

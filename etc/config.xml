@@ -9,21 +9,36 @@
                 <enabled>0</enabled>
                 <message>Hello There, this your notices, sales, update e.t.c.</message>
             </notices>
-            <bussines_hours>
+            <business_hours>
                 <enabled>0</enabled>
                 <daily_hours>
                     <item1>
-                        <day_of_week>Monday Morning</day_of_week>
+                        <day_of_week>Monday</day_of_week>
                         <opening_hours>08:00</opening_hours>
-                        <closing_hours>12:00</closing_hours>
+                        <closing_hours>17:00</closing_hours>
                     </item1>
                     <item2>
-                        <day_of_week>Monday Afternoon</day_of_week>
-                        <opening_hours>14:00</opening_hours>
-                        <closing_hours>18:00</closing_hours>
+                        <day_of_week>Thuesday</day_of_week>
+                        <opening_hours>08:00</opening_hours>
+                        <closing_hours>17:00</closing_hours>
                     </item2>
+                    <item3>
+                        <day_of_week>Wensday</day_of_week>
+                        <opening_hours>08:00</opening_hours>
+                        <closing_hours>17:00</closing_hours>
+                    </item3>
+                    <item4>
+                        <day_of_week>Thursday</day_of_week>
+                        <opening_hours>08:00</opening_hours>
+                        <closing_hours>21:00</closing_hours>
+                    </item4>
+                    <item5>
+                        <day_of_week>Friday</day_of_week>
+                        <opening_hours>08:00</opening_hours>
+                        <closing_hours>17:00</closing_hours>
+                    </item5>
                 </daily_hours>
-            </bussines_hours>
+            </business_hours>
         </siteation_storeinfo>
     </default>
 </config>
