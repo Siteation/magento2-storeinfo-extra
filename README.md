@@ -5,6 +5,9 @@
 [![Hyvä Themes Supported](https://img.shields.io/badge/Hyva_Themes-Supported-3df0af.svg?longCache=true&style=for-the-badge)](https://hyva.io/)
 ![License](https://img.shields.io/github/license/Siteation/magento2-storeinfo-extra?color=%23234&style=for-the-badge)
 
+> [!WARNING]
+> This package has been Abbonded and merged with the v3 of the [StoreInfo](https://github.com/Siteation/magento2-storeinfo)
+
 This Magento 2 module add the option to show social buttons or more extras with ease.
 
 So you can get the whatsapp number from the Stores > Config.
@@ -20,7 +23,8 @@ bin/magento module:enable Siteation_StoreInfoExtra
 bin/magento setup:upgrade
 ```
 
-> **Note** This Module require Magento 2.3 or higher!
+> [!NOTE]
+> This Module require Magento 2.3 or higher!
 > For more requirements see the `composer.json`.
 
 ## How to use
